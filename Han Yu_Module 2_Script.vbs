@@ -74,14 +74,11 @@ For Each ws In Worksheets
                 End If
         
         'Caculate the Percent change
-                'If Yearly = 0 Then
-                    'Range("K" & TickerCounter).Value = 0
-        
-                'Else
-                    PercentC = Yearly / OpenPrice
-                    ws.Range("K" & TickerCounter).Value = PercentC
-                    ws.Range("K" & TickerCounter).NumberFormat = "0.00%"
-                'End If
+
+        PercentC = Yearly / OpenPrice
+        ws.Range("K" & TickerCounter).Value = PercentC
+        ws.Range("K" & TickerCounter).NumberFormat = "0.00%"
+
             
         'Caculate the total number
         StockTotal = StockTotal + Cells(i, 7).Value
